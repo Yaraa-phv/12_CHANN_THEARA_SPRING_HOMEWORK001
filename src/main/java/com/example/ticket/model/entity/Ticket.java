@@ -12,26 +12,28 @@ import java.util.Date;
 public class Ticket {
     private int ticketId;
     private String passengerName;
-    private Date travelDate;
+    private String travelDate;
     private String sourceStation;
     private String destinationStation;
     private double price;
-    private String paymentStatus;
-    private String ticketStatus;
-    private int seatNumber;
-//    private int count = ticketId + 1;
+    private boolean paymentStatus;
+    private TicketStatus ticketStatus;
+    private String seatNumber;
+    private static int count = 1;
 
-//    public Ticket(int ticketId, String passengerName, String sourceStation, String destinationStation, double price, String paymetStatus, String ticketStatus, int seatNumber) {
-//        this.ticketId = ticketId;
-//        this.passengerName = passengerName;
-//        this.travelDate = new Date();
-//        this.sourceStation = sourceStation;
-//        this.destinationStation = destinationStation;
-//        this.price = price;
-//        this.paymetStatus = paymetStatus;
-//        this.ticketStatus = ticketStatus;
-//        this.seatNumber = seatNumber;
-//    }
+    public Ticket(String passengerName, String travelDate, String sourceStation, String destinationStation, double price, boolean paymentStatus, TicketStatus ticketStatus, String seatNumber) {
+        this.ticketId = count++;
+        this.passengerName = passengerName;
+        this.travelDate = travelDate;
+        this.sourceStation = sourceStation;
+        this.destinationStation = destinationStation;
+        this.price = price;
+        this.paymentStatus = paymentStatus;
+        this.ticketStatus = ticketStatus;
+        this.seatNumber = seatNumber;
+    }
+
+
 
 //
 //    public void setTicketId(int ticketId) {

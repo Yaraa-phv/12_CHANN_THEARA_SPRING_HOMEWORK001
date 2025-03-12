@@ -1,7 +1,12 @@
 package com.example.ticket.model.entity;
 
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class PostTicket {
     private String passengerName;
     private String sourceStation;
@@ -11,13 +16,4 @@ public class PostTicket {
     private String ticketStatus;
     private int seatNumber;
 
-    public PostTicket(String passengerName, String sourceStation, String destinationStation, double price, String paymetStatus, String ticketStatus, int seatNumber){
-        this.passengerName = passengerName;
-        this.sourceStation = sourceStation;
-        this.destinationStation = destinationStation;
-        this.price = price;
-        this.paymetStatus = paymetStatus;
-        this.ticketStatus = ticketStatus;
-        this.seatNumber = seatNumber;
-    }
 }
